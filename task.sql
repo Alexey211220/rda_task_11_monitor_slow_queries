@@ -10,17 +10,13 @@ CREATE TABLE Products1 (
     PRIMARY KEY (ID)
 ) ENGINE=InnoDB;
 
-CREATE TABLE Products2 (
-    ID INT AUTO_INCREMENT,
-    Name VARCHAR(50),
-    PRIMARY KEY (ID)
-) ENGINE=MyISAM;
+-- CREATE TABLE Products2 (
+--     ID INT AUTO_INCREMENT,
+--     Name VARCHAR(50),
+--     PRIMARY KEY (ID)
+-- ) ENGINE=MyISAM;
 
-
-DROP TABLE IF EXISTS Products2;
-
-
--- Why the Products2 was dropped? 
+-- Why the Products2 was fully commented out? 
 -- I tested both tables at least 10 times. The average time of selecting data from the Products1 table is 0.000330 seconds, while the average time of selecting data from the Products2 table is 0.000488 seconds.
 -- Because the average time of selecting data from Products2 table is 1.48 times slower than selecting data from Products1 table.
 -- Which is why I decided to drop the Products2 table and comment out the code that inserts data into it.
